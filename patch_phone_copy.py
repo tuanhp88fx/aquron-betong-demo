@@ -1,0 +1,13 @@
+﻿from pathlib import Path
+p=Path('app/page.tsx')
+s=p.read_text(encoding='utf-8')
+s=s.replace('Chống thấm Luân','Chống thấm công trình',1)
+s=s.replace('Gọi Luân 0944 209 157','Gọi 0944 209 157')
+s=s.replace('Hệ sản phẩm chống thấm • Tư vấn bởi Luân','Hệ sản phẩm chống thấm • Tư vấn đúng hạng mục')
+s=s.replace('Hotline: Luân chống thấm 0944 209 157.','Hotline tư vấn: 0944 209 157.')
+s=s.replace('Gọi Luân chống thấm','Gọi tư vấn ngay')
+s=s.replace('<a href="#lien-he" className="rounded-full border border-[#114234]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#114234] hover:bg-white">\n                0944 209 157\n              </a>', '<a href="tel:0944209157" className="rounded-full border border-[#114234]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#114234] hover:bg-white">\n                0944 209 157\n              </a>')
+s=s.replace('Gửi ảnh hiện trạng bê tông để được tư vấn hướng xử lý phù hợp.', 'Gửi ảnh hiện trạng để được tư vấn hướng xử lý phù hợp.')
+s=s.replace('<a href="tel:0944209157" className="rounded-full bg-white px-7 py-3 font-bold text-[#0d2e25]">Gọi 0904 128 909</a>', '<a href="tel:0944209157" className="rounded-full bg-white px-7 py-3 font-bold text-[#0d2e25]">Gọi 0944 209 157</a>')
+s=s.replace('<a href="mailto:chau@itsv.com.vn" className="rounded-full border border-white/25 px-7 py-3 font-bold text-white">Gửi email tư vấn</a>', '<a href="https://demo-site-three-fawn.vercel.app" className="rounded-full border border-white/25 px-7 py-3 font-bold text-white">Xem tài liệu sản phẩm</a>')
+p.write_text(s,encoding='utf-8')
