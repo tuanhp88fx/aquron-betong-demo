@@ -22,7 +22,7 @@ const benefits = [
 ]
 
 const stats = [
-  ["15 năm", "bảo hành chống thấm cho bê tông mới nếu thi công đúng quy trình"],
+  ["Chịu áp", "kết cấu tự chống thấm, chịu được áp suất thủy tĩnh từ mạch nước ngầm"],
   ["4–5m²/L", "định mức tham khảo, vật tư gọn nên tối ưu chi phí"],
   ["1 người", "có thể tự làm hạng mục nhỏ, không cần thuê thợ chuyên nghiệp"],
   ["150mm", "khả năng ngấm sâu vào bê tông theo tài liệu kỹ thuật"],
@@ -63,7 +63,7 @@ const workScopes = [
     issue: "Mưa to thấm xuống trần, nghi cổ ống, chân tường hoặc nền bê tông hút nước.",
     product: "AQURON 2000",
     process: "Xử lý kín cổ ống/khe nứt trước, làm sạch nền bê tông, làm ẩm không đọng nước rồi phun AQURON 2000 2 lớp ướt-trên-ướt.",
-    durability: "Tài liệu nêu hydrogel trở thành một phần của bê tông; bê tông mới thi công đúng quy trình có bảo hành chống thấm 15 năm.",
+    durability: "Tài liệu nêu hydrogel trở thành một phần của bê tông, không tạo màng bề mặt nên không bong tróc, không phồng rộp.",
     note: "Hạng mục nhỏ có thể tự làm, không cần thuê thợ nếu nền đã lộ bê tông và làm đúng hướng dẫn.",
   },
   {
@@ -185,7 +185,7 @@ const technicalTopics = [
   {
     src: "/images/pdf/aquron-page-04.jpg",
     title: "Độ bền & hiệu quả lâu dài",
-    text: "Tài liệu nêu chống thấm vĩnh viễn, giảm ẩm dịch chuyển và bảo hành chống thấm bê tông mới 15 năm khi làm đúng quy trình.",
+    text: "Tài liệu nêu chống thấm vĩnh viễn, giảm ẩm dịch chuyển; hoạt chất nằm trong mao mạch bê tông nên không bong, không phồng rộp.",
     href: "/docs/topics/do-ben-bao-hanh-15-nam.pdf",
     cta: "Tìm hiểu thêm",
   },
@@ -309,7 +309,7 @@ export default function Home() {
       <section id="loi-ich" className="mx-auto max-w-7xl px-5 py-20">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Lợi ích chính</p>
-          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Giá hợp lý, thi công nhanh, nhận triển khai toàn quốc, độ bền chống thấm lên tới 15 năm.</h2>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Giá hợp lý, thi công nhanh, nhận triển khai toàn quốc, chống thấm bền lâu nhờ hoạt chất nằm trong mao mạch bê tông.</h2>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
