@@ -282,11 +282,16 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-white/80 bg-white/55 p-4 shadow-2xl shadow-black/10 backdrop-blur">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#173f35] text-white">
-              {/* Hero video bây giờ embed từ YouTube. Cấu hình ID tại `lib/media.ts` -> heroVideo.youtubeId */}
-              <YoutubeHero
-                youtubeId={heroVideo.youtubeId}
-                posterUrl={heroVideo.posterUrl}
-                title={heroVideo.caption}
+              {/* Hero video tạm dùng file MP4 trực tiếp; khi có YouTube ID thì đổi lại YoutubeHero. */}
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/videos/hero/easy-application.mp4"
+                poster={heroVideo.posterUrl}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a15] via-[#071a15]/20 to-transparent" />
               <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-6">
