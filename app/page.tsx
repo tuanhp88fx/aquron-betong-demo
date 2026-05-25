@@ -1,3 +1,7 @@
+import { heroVideo, projectVideos } from "@/lib/media"
+import { YoutubeHero } from "@/components/youtube-hero"
+import { YoutubeCard } from "@/components/youtube-card"
+
 const benefits = [
   {
     title: "Chống thấm từ bên trong",
@@ -133,7 +137,10 @@ const process = [
   "Chờ sản phẩm thẩm thấu hoàn toàn trước các bước hoàn thiện; với lớp phủ cần tuân thủ hướng dẫn kỹ thuật.",
 ]
 
-const videos = [
+// Video list đã chuyển sang `lib/media.ts` (YouTube embed). Giữ alias để tương thích với block render bên dưới.
+const videos = projectVideos
+
+const _legacyVideosBackup = [
   { src: "/videos/project/7799149296493.mp4", title: "Video giới thiệu sản phẩm" },
   { src: "/videos/project/7799149300226.mp4", title: "Video thi công phun thực tế" },
   { src: "/videos/project/7799162075409.mp4", title: "Video công trình trước & sau xử lý" },
@@ -220,10 +227,10 @@ export default function Home() {
             <a href="#lien-he">Liên hệ</a>
           </nav>
           <a
-            href="tel:0944209157"
+            href="tel:0904128909"
             className="rounded-full bg-[#114234] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0b2f25]"
           >
-            Gọi 0944 209 157
+            Gọi 0904 128 909
           </a>
         </div>
       </header>
@@ -239,7 +246,7 @@ export default function Home() {
               Đủ giải pháp chống thấm: từ bê tông, tường, sàn đến thiết bị thi công.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4d5e56]">
-              Từ AQURON 2000, AQURON 7000, CONQOR, Waterpel, Silguard đến MagicGrip/Barracuda — chọn đúng sản phẩm theo bề mặt và hạng mục. Nhận tư vấn và triển khai công trình tại các tỉnh thành trên toàn quốc. Hotline tư vấn: 0944 209 157.
+              Chuyên chống thấm hầm, tầng hầm, bể nước, hố thang máy — chịu được áp suất thủy tĩnh cao, ngăn nước rò ngược từ mạch nước ngầm. Hệ AQURON 2000/7000, CONQOR, Waterpel, Silguard… chọn đúng sản phẩm theo bề mặt và hạng mục, triển khai toàn quốc. Hotline tư vấn: 0904 128 909.
             </p>
             <div className="mt-6 space-y-3">
               <div>
@@ -267,25 +274,22 @@ export default function Home() {
               <a href="#lien-he" className="rounded-full bg-[#114234] px-6 py-3 text-center font-semibold text-white shadow-lg shadow-[#114234]/20 hover:bg-[#0b2f25]">
                 Gọi tư vấn ngay
               </a>
-              <a href="tel:0944209157" className="rounded-full border border-[#114234]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#114234] hover:bg-white">
-                0944 209 157
+              <a href="tel:0904128909" className="rounded-full border border-[#114234]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#114234] hover:bg-white">
+                0904 128 909
               </a>
             </div>
           </div>
 
           <div className="rounded-[2rem] border border-white/80 bg-white/55 p-4 shadow-2xl shadow-black/10 backdrop-blur">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#173f35] text-white">
-              <video
-                className="h-full w-full object-cover opacity-90"
-                src="/videos/hero/easy-application.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
+              {/* Hero video bây giờ embed từ YouTube. Cấu hình ID tại `lib/media.ts` -> heroVideo.youtubeId */}
+              <YoutubeHero
+                youtubeId={heroVideo.youtubeId}
+                posterUrl={heroVideo.posterUrl}
+                title={heroVideo.caption}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071a15] via-[#071a15]/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a15] via-[#071a15]/20 to-transparent" />
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-6">
                 <p className="text-sm uppercase tracking-[0.35em] text-[#f4d28a]">Video thi công thực tế</p>
                 <h2 className="mt-3 font-serif text-5xl leading-none">Tự phun dễ dàng</h2>
                 <p className="mt-3 text-white/80">Không cần thuê thợ cho hạng mục nhỏ: làm sạch, làm ẩm, phun đều theo hướng dẫn.</p>
@@ -423,17 +427,9 @@ export default function Home() {
           <a href="#lien-he" className="rounded-full bg-[#114234] px-6 py-3 text-center font-semibold text-white">Tư vấn qua Zalo/Điện thoại</a>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {videos.map((video, idx) => (
-            <article key={video.src} className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
-              <div className="bg-black">
-                <video
-                  className="aspect-video h-full w-full object-cover"
-                  src={video.src}
-                  controls
-                  preload="metadata"
-                  playsInline
-                />
-              </div>
+          {videos.map((video) => (
+            <article key={video.youtubeId} className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+              <YoutubeCard youtubeId={video.youtubeId} title={video.title} />
               <div className="p-5">
                 <h3 className="font-bold text-[#143c31]">{video.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#65726c]">Tư liệu video phục vụ giới thiệu quy trình, hiện trường và khả năng ứng dụng của AQURON 2000 trong thực tế.</p>
@@ -485,7 +481,7 @@ export default function Home() {
             Đội ngũ tư vấn sẽ đánh giá hiện trạng bề mặt, mục tiêu chống thấm hoặc kiểm soát ẩm, từ đó đề xuất quy trình xử lý phù hợp cho từng hạng mục.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="tel:0944209157" className="rounded-full bg-white px-7 py-3 font-bold text-[#0d2e25]">Gọi 0944 209 157</a>
+            <a href="tel:0904128909" className="rounded-full bg-white px-7 py-3 font-bold text-[#0d2e25]">Gọi 0904 128 909</a>
             <a href="https://demo-site-three-fawn.vercel.app" className="rounded-full border border-white/25 px-7 py-3 font-bold text-white">Xem tài liệu sản phẩm</a>
           </div>
         </div>
