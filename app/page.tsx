@@ -40,6 +40,9 @@ const products = [
 ]
 
 const scopeTags = [
+  { name: "Hầm ngầm / tầng hầm", href: "#hang-muc-conqor-b50" },
+  { name: "Hố thang máy", href: "#hang-muc-conqor-b50" },
+  { name: "Bể nước / bể ngầm", href: "#hang-muc-conqor-b50" },
   { name: "Sân thượng", href: "#hang-muc-aquron-2000" },
   { name: "Mái bê tông", href: "#hang-muc-aquron-2000" },
   { name: "Nhà vệ sinh cũ", href: "#hang-muc-nha-ve-sinh" },
@@ -49,7 +52,6 @@ const scopeTags = [
   { name: "Đá / gạch ngoài trời", href: "#hang-muc-protectacrete-w" },
   { name: "Tường ngoài", href: "#hang-muc-protectacrete-w" },
   { name: "Bê tông mới", href: "#hang-muc-conqor-b50" },
-  { name: "Tầng hầm / bể", href: "#hang-muc-conqor-b50" },
   { name: "Cầu cảng / ven biển", href: "#hang-muc-aquron-7000" },
   { name: "Sàn bê tông bụi", href: "#hang-muc-densacrete" },
 ]
@@ -93,8 +95,8 @@ const workScopes = [
   },
   {
     id: "hang-muc-conqor-b50",
-    surface: "Bê tông mới: bể, tầng hầm, sàn/vách cần chống thấm từ đầu",
-    issue: "Muốn chống thấm ngay trong khối bê tông thay vì đợi thấm rồi sửa.",
+    surface: "Hầm ngầm, tầng hầm, hố thang máy, bể nước — bê tông mới cần chống thấm từ đầu",
+    issue: "Muốn chống thấm ngay trong khối bê tông để chịu được áp suất thủy tĩnh từ mạch nước ngầm, không đợi thấm rồi sửa.",
     product: "CONQOR B50",
     process: "Pha phụ gia vào khoảng 70% lượng nước trộn trước khi thêm xi măng/cốt liệu; trộn đều khoảng 2 phút theo cấp phối.",
     durability: "Phụ gia tạo gel ưa nước trong bê tông, hỗ trợ chống thấm từ bên trong và cải thiện khả năng tự vá vết nứt nhỏ không dịch chuyển.",
