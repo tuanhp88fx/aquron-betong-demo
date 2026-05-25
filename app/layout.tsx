@@ -17,9 +17,40 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "AQURON 2000 - Chống thấm & xử lý bê tông",
+  metadataBase: new URL("https://www.chongthamnano.com"),
+  title: "Chống thấm nano chuẩn công nghệ Úc | AQURON 2000, CONQOR, Waterpel",
   description:
-    "Website demo giới thiệu AQURON 2000: chống thấm, khóa ẩm, tăng cứng và kéo dài tuổi thọ bê tông.",
+    "Chống thấm nano chuẩn công nghệ Úc: thấm sâu vào mao mạch bê tông, khóa lỗ rỗng từ bên trong, không tạo màng nên không bong tróc. Hệ AQURON 2000/7000, CONQOR, Waterpel, Silguard cho hầm, tầng hầm, bể nước, hố thang máy. Hotline 0904 128 909.",
+  keywords: [
+    "chống thấm nano",
+    "chống thấm công nghệ Úc",
+    "AQURON 2000",
+    "AQURON 7000",
+    "CONQOR",
+    "Waterpel",
+    "Silguard",
+    "chống thấm bê tông",
+    "chống thấm hầm",
+    "chống thấm tầng hầm",
+    "chống thấm bể nước",
+    "chống thấm hố thang máy",
+  ],
+  alternates: {
+    canonical: "https://www.chongthamnano.com/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    url: "https://www.chongthamnano.com/",
+    siteName: "Chống thấm nano",
+    title: "CHỐNG THẤM NANO CHUẨN CÔNG NGHỆ ÚC",
+    description:
+      "Thấm sâu vào mao mạch bê tông, khóa lỗ rỗng từ bên trong. Hệ AQURON 2000/7000, CONQOR, Waterpel, Silguard cho hầm, bể nước, hố thang máy.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   generator: "OpenClaw",
 }
 

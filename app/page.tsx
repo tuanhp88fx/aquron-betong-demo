@@ -212,15 +212,46 @@ const technicalTopics = [
   },
 ]
 
+const productGallery = [
+  {
+    name: "AQURON 2000",
+    tag: "Spray-on hydrogel",
+    image: "/products/aquron-2000.jpg",
+    text: "Hydrogel colloidal silica công nghệ Úc, phun trực tiếp lên bê tông, thấm sâu tới 150mm. Chống thấm + kiểm soát ẩm bề mặt.",
+    href: "#hang-muc-aquron-2000",
+  },
+  {
+    name: "AQURON 7000",
+    tag: "Corrosion protection",
+    image: "/products/aquron-7000.png",
+    text: "Dòng cao cấp chuyên kết cấu hạ tầng, cầu cảng, bãi xe — chặn ion clorua, bảo vệ cốt thép khỏi ăn mòn.",
+    href: "#hang-muc-aquron-7000",
+  },
+  {
+    name: "CONQOR B50",
+    tag: "Concrete admix",
+    image: "/products/conqor-b50.jpg",
+    text: "Phụ gia trộn trực tiếp vào bê tông tươi. Chống thấm từ bên trong ngay từ đầu, chịu được áp suất thủy tĩnh cao.",
+    href: "#hang-muc-conqor-b50",
+  },
+  {
+    name: "PROTECTACRETE W",
+    tag: "Penetrating sealer",
+    image: "/products/protectacrete-w.jpg",
+    text: "Sealer silane/siloxane gốc nước cho tường gạch, đá, bê tông lộ. Thấm sâu, chống ẩm mao dẫn, không đổi màu bề mặt.",
+    href: "#hang-muc-protectacrete-w",
+  },
+]
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f6f2ea] text-[#1f2a24]">
-      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f6f2ea]/90 backdrop-blur">
+    <main className="min-h-screen bg-[#ffffff] text-[#1f2a24]">
+      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#ffffff]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-          <a href="#top" className="font-serif text-2xl font-semibold tracking-tight text-[#114234]">
+          <a href="#top" className="font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
             CHỐNG THẤM CÔNG TRÌNH
           </a>
-          <nav className="hidden items-center gap-6 text-sm font-medium text-[#385047] md:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-[#3a3a3a] md:flex">
             <a href="#loi-ich">Lợi ích</a>
             <a href="#san-pham">Hạng mục</a>
             <a href="#ung-dung">Ứng dụng</a>
@@ -230,42 +261,46 @@ export default function Home() {
           </nav>
           <a
             href="tel:0904128909"
-            className="rounded-full bg-[#114234] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0b2f25]"
+            className="rounded-full bg-[#1a1a1a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#111111]"
           >
             Gọi 0904 128 909
           </a>
         </div>
       </header>
 
-      <section id="top" className="relative overflow-hidden border-b border-black/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(30,111,86,0.18),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(171,129,63,0.22),transparent_30%)]" />
+      <section id="top" className="relative overflow-hidden border-b border-black/10 bg-white text-[#1a1a1a]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(200,16,46,0.10),transparent_45%),radial-gradient(circle_at_85%_15%,rgba(200,16,46,0.08),transparent_45%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-[1.08fr_0.92fr] md:py-28">
           <div className="flex flex-col justify-center">
-            <p className="mb-5 inline-flex w-fit rounded-full border border-[#114234]/20 bg-white/60 px-4 py-2 text-sm font-semibold text-[#114234]">
+            <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[#c8102e]/30 bg-[#fff5f6] px-4 py-2 text-sm font-semibold text-[#c8102e]">
+              <span className="inline-block h-2 w-2 rounded-full bg-[#c8102e]" />
               Hệ sản phẩm chống thấm • Tư vấn đúng hạng mục
             </p>
-            <h1 className="font-serif text-5xl font-semibold leading-[0.96] tracking-tight text-[#143c31] md:text-7xl">
-              Đủ giải pháp chống thấm: từ bê tông, tường, sàn đến thiết bị thi công.
+            <h1 className="font-serif text-5xl font-semibold uppercase leading-[0.96] tracking-tight text-[#1a1a1a] md:text-7xl">
+              CHỐNG THẤM NANO CHUẨN CÔNG NGHỆ ÚC.
             </h1>
+            <p className="mt-4 font-sans text-2xl font-medium italic leading-snug text-[#c8102e] md:text-3xl">
+              Thấm sâu vào mao mạch bê tông, khóa lỗ rỗng từ bên trong.
+            </p>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4d5e56]">
               Chuyên chống thấm hầm, tầng hầm, bể nước, hố thang máy — chịu được áp suất thủy tĩnh cao, ngăn nước rò ngược từ mạch nước ngầm. Hệ AQURON 2000/7000, CONQOR, Waterpel, Silguard… chọn đúng sản phẩm theo bề mặt và hạng mục, triển khai toàn quốc. Hotline tư vấn: 0904 128 909.
             </p>
             <div className="mt-6 space-y-3">
               <div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#9b763a]">Theo sản phẩm</p>
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">Theo sản phẩm</p>
                 <div className="flex flex-wrap gap-2">
                   {products.map((product) => (
-                    <a key={product.name} href={product.href} className="rounded-full border border-[#114234]/15 bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#114234] transition hover:border-[#114234]/35 hover:bg-white hover:shadow-sm">
+                    <a key={product.name} href={product.href} className="rounded-full border border-[#1a1a1a]/15 bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#1a1a1a] transition hover:border-[#1a1a1a]/35 hover:bg-white hover:shadow-sm">
                       {product.name}
                     </a>
                   ))}
                 </div>
               </div>
               <div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#9b763a]">Theo hạng mục</p>
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">Theo hạng mục</p>
                 <div className="flex flex-wrap gap-2">
                   {scopeTags.map((scope) => (
-                    <a key={scope.name} href={scope.href} className="rounded-full border border-[#9b763a]/20 bg-[#f7ead2]/80 px-3 py-1.5 text-xs font-semibold text-[#7a5a2e] transition hover:border-[#9b763a]/45 hover:bg-[#fff3dc] hover:shadow-sm">
+                    <a key={scope.name} href={scope.href} className="rounded-full border border-[#c8102e]/20 bg-[#fdf2f3]/80 px-3 py-1.5 text-xs font-semibold text-[#c8102e] transition hover:border-[#c8102e]/45 hover:bg-[#ffffff] hover:shadow-sm">
                       {scope.name}
                     </a>
                   ))}
@@ -273,33 +308,28 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#lien-he" className="rounded-full bg-[#114234] px-6 py-3 text-center font-semibold text-white shadow-lg shadow-[#114234]/20 hover:bg-[#0b2f25]">
+              <a href="#lien-he" className="rounded-full bg-[#1a1a1a] px-6 py-3 text-center font-semibold text-white shadow-lg shadow-[#1a1a1a]/20 hover:bg-[#111111]">
                 Gọi tư vấn ngay
               </a>
-              <a href="tel:0904128909" className="rounded-full border border-[#114234]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#114234] hover:bg-white">
+              <a href="tel:0904128909" className="rounded-full border border-[#1a1a1a]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#1a1a1a] hover:bg-white">
                 0904 128 909
               </a>
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/80 bg-white/55 p-4 shadow-2xl shadow-black/10 backdrop-blur">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#173f35] text-white">
-              {/* Hero video tạm dùng file MP4 trực tiếp; khi có YouTube ID thì đổi lại YoutubeHero. */}
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                src="/videos/hero/easy-application.mp4"
-                poster={heroVideo.posterUrl}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a15] via-[#071a15]/20 to-transparent" />
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f4d28a]">Video thi công thực tế</p>
-                <h2 className="mt-3 font-serif text-5xl leading-none">Tự phun dễ dàng</h2>
-                <p className="mt-3 text-white/80">Không cần thuê thợ cho hạng mục nhỏ: làm sạch, làm ẩm, phun đều theo hướng dẫn.</p>
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#c8102e]/15 via-transparent to-[#c8102e]/10 blur-2xl" />
+            <div className="relative rounded-[2rem] border border-[#c8102e]/15 bg-white p-4 shadow-2xl shadow-[#c8102e]/10">
+              <div className="relative overflow-hidden rounded-[1.25rem]">
+                <img
+                  src="/aquron-2000-banner.jpg"
+                  alt="AQURON 2000 - Ultimate Concrete Treatment"
+                  className="block h-auto w-full"
+                />
+              </div>
+              <div className="mt-4 flex flex-col gap-1 px-2 pb-2">
+                <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8102e]">Sản phẩm chủ lực</p>
+                <p className="text-base text-[#1a1a1a]/80">Hydrogel colloidal silica công nghệ Úc, thấm sâu tới 150mm vào bê tông — bảo vệ kết cấu từ bên trong.</p>
               </div>
             </div>
           </div>
@@ -308,12 +338,12 @@ export default function Home() {
 
       <section id="loi-ich" className="mx-auto max-w-7xl px-5 py-20">
         <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Lợi ích chính</p>
-          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Giá hợp lý, thi công nhanh, nhận triển khai toàn quốc, chống thấm bền lâu nhờ hoạt chất nằm trong mao mạch bê tông.</h2>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Lợi ích chính</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Giá hợp lý, thi công nhanh, nhận triển khai toàn quốc, chống thấm bền lâu nhờ hoạt chất nằm trong mao mạch bê tông.</h2>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
-            <div key={value} className="rounded-3xl border border-[#114234]/15 bg-[#114234] p-6 text-white shadow-sm">
+            <div key={value} className="rounded-3xl border border-[#1a1a1a]/15 bg-[#1a1a1a] p-6 text-white shadow-sm">
               <p className="font-serif text-4xl font-semibold">{value}</p>
               <p className="mt-2 text-sm leading-6 text-white/78">{label}</p>
             </div>
@@ -322,40 +352,63 @@ export default function Home() {
         <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((item) => (
             <article key={item.title} className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-[#143c31]">{item.title}</h3>
+              <h3 className="text-xl font-bold text-[#1a1a1a]">{item.title}</h3>
               <p className="mt-3 leading-7 text-[#58675f]">{item.text}</p>
             </article>
           ))}
         </div>
       </section>
 
+      <section id="san-pham-list" className="mx-auto max-w-7xl px-5 pb-10">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Dòng sản phẩm chính</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Hệ sản phẩm chống thấm công nghệ Úc.</h2>
+          <p className="mt-4 leading-7 text-[#4d5e56]">Mỗi sản phẩm phục vụ một nhu cầu khác nhau: xử lý bề mặt, chống ăn mòn cốt thép, phụ gia bê tông mới, hay sản phẩm sản cầu thấm không tạo màng.</p>
+        </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {productGallery.map((p) => (
+            <a key={p.name} href={p.href} className="group flex flex-col overflow-hidden rounded-3xl border border-[#1a1a1a]/12 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#fbe9eb] p-5">
+                <img src={p.image} alt={p.name} className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105" />
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8102e]">{p.tag}</p>
+                <h3 className="mt-2 font-serif text-2xl font-semibold text-[#1a1a1a]">{p.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-6 text-[#4d5e56]">{p.text}</p>
+                <span className="mt-4 inline-flex w-fit rounded-full bg-[#1a1a1a] px-4 py-2 text-xs font-semibold text-white">Xem hạng mục · tư vấn</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section id="san-pham" className="mx-auto max-w-7xl px-5 pb-20">
-        <div className="rounded-[2rem] border border-[#114234]/10 bg-white/70 p-8 shadow-sm md:p-10">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Hạng mục công trình</p>
-          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Chọn theo bề mặt cần xử lý, không chọn sản phẩm theo cảm tính.</h2>
+        <div className="rounded-[2rem] border border-[#1a1a1a]/10 bg-white/70 p-8 shadow-sm md:p-10">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Hạng mục công trình</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Chọn theo bề mặt cần xử lý, không chọn sản phẩm theo cảm tính.</h2>
           <p className="mt-4 max-w-3xl leading-7 text-[#58675f]">Từ tài liệu AQURON, CONQOR và Tech-Dry: mỗi hạng mục cần xem bề mặt, nguồn nước, khe nứt/cổ ống, cách thi công và độ bền mong muốn. Bảng dưới giúp chủ nhà chọn nhanh hướng xử lý phù hợp.</p>
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
             {workScopes.map((scope) => (
-              <article id={scope.id} key={scope.surface} className="scroll-mt-24 rounded-3xl border border-[#114234]/12 bg-[#f6f2ea] p-5 shadow-sm transition target:border-[#114234]/45 target:bg-white target:shadow-xl">
+              <article id={scope.id} key={scope.surface} className="scroll-mt-24 rounded-3xl border border-[#1a1a1a]/12 bg-[#ffffff] p-5 shadow-sm transition target:border-[#1a1a1a]/45 target:bg-white target:shadow-xl">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-[#114234] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-white">{scope.product}</span>
-                  <span className="rounded-full border border-[#114234]/15 bg-white/70 px-3 py-1 text-xs font-semibold text-[#114234]">Dễ tư vấn theo hạng mục</span>
+                  <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-white">{scope.product}</span>
+                  <span className="rounded-full border border-[#1a1a1a]/15 bg-white/70 px-3 py-1 text-xs font-semibold text-[#1a1a1a]">Dễ tư vấn theo hạng mục</span>
                 </div>
-                <h3 className="mt-4 text-2xl font-bold text-[#143c31]">{scope.surface}</h3>
+                <h3 className="mt-4 text-2xl font-bold text-[#1a1a1a]">{scope.surface}</h3>
                 <dl className="mt-4 space-y-3 text-sm leading-6 text-[#4d5e56]">
                   <div>
-                    <dt className="font-bold text-[#8a642d]">Vấn đề thường gặp</dt>
+                    <dt className="font-bold text-[#c8102e]">Vấn đề thường gặp</dt>
                     <dd>{scope.issue}</dd>
                   </div>
                   <div>
-                    <dt className="font-bold text-[#8a642d]">Quy trình thi công</dt>
+                    <dt className="font-bold text-[#c8102e]">Quy trình thi công</dt>
                     <dd>{scope.process}</dd>
                   </div>
                   <div>
-                    <dt className="font-bold text-[#8a642d]">Độ bền / cơ sở kỹ thuật</dt>
+                    <dt className="font-bold text-[#c8102e]">Độ bền / cơ sở kỹ thuật</dt>
                     <dd>{scope.durability}</dd>
                   </div>
-                  <div className="rounded-2xl bg-white/75 p-3 text-[#114234]">
+                  <div className="rounded-2xl bg-white/75 p-3 text-[#1a1a1a]">
                     <dt className="font-bold">Ghi chú bán hàng</dt>
                     <dd>{scope.note}</dd>
                   </div>
@@ -366,10 +419,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="ung-dung" className="bg-[#123c31] py-20 text-white">
+      <section id="ung-dung" className="bg-[#1a1a1a] py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#e1bf78]">Ứng dụng</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f8b5bc]">Ứng dụng</p>
             <h2 className="mt-3 font-serif text-4xl font-semibold md:text-5xl">Phù hợp nhiều hạng mục bê tông trong nhà và ngoài trời.</h2>
             <p className="mt-5 text-lg leading-8 text-white/72">
               Giải pháp phù hợp cho các hạng mục cần kiểm soát ẩm, tăng độ bền bề mặt và kéo dài tuổi thọ kết cấu bê tông. Có thể tư vấn vật tư, quy trình và đội thi công cho công trình ở nhiều tỉnh thành trên cả nước.
@@ -387,35 +440,35 @@ export default function Home() {
 
       <section id="hinh-anh" className="mx-auto max-w-7xl px-5 py-20">
         <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Tài liệu kỹ thuật có thể mở</p>
-          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Tư liệu kỹ thuật, công dụng và công trình tham khảo.</h2>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Tài liệu kỹ thuật có thể mở</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Tư liệu kỹ thuật, công dụng và công trình tham khảo.</h2>
           <p className="mt-4 leading-7 text-[#58675f]">Mỗi chủ đề bên dưới đã được tách thành file PDF ngắn chỉ gồm vài trang liên quan, không mở cả tài liệu dài. Chủ đề tập trung vào các điểm dễ quảng bá nhất: dễ thi công, chống thấm từ bên trong, độ bền, ngấm sâu, ứng dụng công trình và danh mục sản phẩm.</p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {technicalTopics.map((topic) => (
             <a key={topic.title} href={topic.href} target="_blank" rel="noreferrer" className="group overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <div className="aspect-[3/4] overflow-hidden bg-[#e7dcc7]">
+              <div className="aspect-[3/4] overflow-hidden bg-[#fbe9eb]">
                 <img src={topic.src} alt={topic.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="p-5">
-                <h3 className="font-bold text-[#143c31]">{topic.title}</h3>
+                <h3 className="font-bold text-[#1a1a1a]">{topic.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#65726c]">{topic.text}</p>
-                <p className="mt-4 inline-flex rounded-full bg-[#114234] px-4 py-2 text-sm font-semibold text-white">{topic.cta}</p>
+                <p className="mt-4 inline-flex rounded-full bg-[#1a1a1a] px-4 py-2 text-sm font-semibold text-white">{topic.cta}</p>
               </div>
             </a>
           ))}
         </div>
 
         <div className="mt-14">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Ảnh thi công thực tế</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Ảnh thi công thực tế</p>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {projectImages.map((image) => (
               <article key={image.src} className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
-                <div className="aspect-[4/3] overflow-hidden bg-[#e7dcc7]">
+                <div className="aspect-[4/3] overflow-hidden bg-[#fbe9eb]">
                   <img src={image.src} alt={image.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-[#143c31]">{image.title}</h3>
+                  <h3 className="font-bold text-[#1a1a1a]">{image.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-[#65726c]">Hình ảnh ghi nhận tại hiện trường, phục vụ minh họa quy trình xử lý và hoàn thiện bề mặt bê tông.</p>
                 </div>
               </article>
@@ -427,18 +480,18 @@ export default function Home() {
       <section id="video" className="mx-auto max-w-7xl px-5 py-20">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Khu vực video sản phẩm</p>
-            <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Video sản phẩm, quy trình thi công và hình ảnh công trình thực tế.</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Khu vực video sản phẩm</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Video sản phẩm, quy trình thi công và hình ảnh công trình thực tế.</h2>
             <p className="mt-4 leading-7 text-[#58675f]">Tổng hợp video giới thiệu sản phẩm, quy trình phun và hình ảnh công trình thực tế. Phần video test chống thấm/khóa ẩm đã được bỏ để trang gọn và tập trung hơn.</p>
           </div>
-          <a href="#lien-he" className="rounded-full bg-[#114234] px-6 py-3 text-center font-semibold text-white">Tư vấn qua Zalo/Điện thoại</a>
+          <a href="#lien-he" className="rounded-full bg-[#1a1a1a] px-6 py-3 text-center font-semibold text-white">Tư vấn qua Zalo/Điện thoại</a>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {videos.map((video) => (
             <article key={video.youtubeId} className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
               <YoutubeCard youtubeId={video.youtubeId} title={video.title} />
               <div className="p-5">
-                <h3 className="font-bold text-[#143c31]">{video.title}</h3>
+                <h3 className="font-bold text-[#1a1a1a]">{video.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#65726c]">Tư liệu video phục vụ giới thiệu quy trình, hiện trường và khả năng ứng dụng của AQURON 2000 trong thực tế.</p>
               </div>
             </article>
@@ -449,14 +502,14 @@ export default function Home() {
       <section id="thi-cong" className="border-y border-black/10 bg-white/55 py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#9b763a]">Quy trình thi công</p>
-            <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31] md:text-5xl">Thi công phun đơn giản, tiết kiệm nhân công và thời gian.</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Quy trình thi công</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Thi công phun đơn giản, tiết kiệm nhân công và thời gian.</h2>
             <p className="mt-5 leading-7 text-[#58675f]">Tài liệu kỹ thuật nêu định mức khoảng 4–5m²/L tùy độ rỗng bê tông, thường phun tối thiểu 2 lớp. Với bề mặt đủ thấm, thi công AQURON 2000 không yêu cầu phải mài bê tông.</p>
           </div>
           <div className="space-y-4">
             {process.map((item, idx) => (
-              <div key={item} className="flex gap-4 rounded-2xl border border-black/10 bg-[#f6f2ea] p-5">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#114234] font-bold text-white">{idx + 1}</div>
+              <div key={item} className="flex gap-4 rounded-2xl border border-black/10 bg-[#ffffff] p-5">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1a1a1a] font-bold text-white">{idx + 1}</div>
                 <p className="leading-7 text-[#4d5e56]">{item}</p>
               </div>
             ))}
@@ -465,36 +518,36 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20">
-        <div className="rounded-[2rem] bg-[#e7dcc7] p-8 md:p-12">
+        <div className="rounded-[2rem] bg-[#fbe9eb] p-8 md:p-12">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#8a642d]">Thông số sản phẩm</p>
-              <h2 className="mt-3 font-serif text-4xl font-semibold text-[#143c31]">Gốc nước, trong suốt, không VOC.</h2>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Thông số sản phẩm</p>
+              <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a]">Gốc nước, trong suốt, không VOC.</h2>
             </div>
             <div className="md:col-span-2 grid gap-4 sm:grid-cols-2">
               {["Dạng: lỏng", "Màu: trong suốt", "Đóng gói: can 20L / IBC 1000L", "Tỷ trọng: 1.09–1.10", "pH: 12±", "Điểm sôi: 110°C", "VOC: Không", "Flammability: Không"].map((item) => (
-                <div key={item} className="rounded-2xl bg-white/70 p-4 font-medium text-[#31423a]">{item}</div>
+                <div key={item} className="rounded-2xl bg-white/70 p-4 font-medium text-[#1a1a1a]">{item}</div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section id="lien-he" className="bg-[#0d2e25] px-5 py-20 text-white">
+      <section id="lien-he" className="bg-[#111111] px-5 py-20 text-white">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#e1bf78]">Liên hệ tư vấn</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f8b5bc]">Liên hệ tư vấn</p>
           <h2 className="mt-4 font-serif text-4xl font-semibold md:text-6xl">Gửi ảnh hiện trạng để được tư vấn hướng xử lý phù hợp.</h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/72">
             Đội ngũ tư vấn sẽ đánh giá hiện trạng bề mặt, mục tiêu chống thấm hoặc kiểm soát ẩm, từ đó đề xuất quy trình xử lý phù hợp cho từng hạng mục.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="tel:0904128909" className="rounded-full bg-white px-7 py-3 font-bold text-[#0d2e25]">Gọi 0904 128 909</a>
+            <a href="tel:0904128909" className="rounded-full bg-white px-7 py-3 font-bold text-[#111111]">Gọi 0904 128 909</a>
             <a href="https://demo-site-three-fawn.vercel.app" className="rounded-full border border-white/25 px-7 py-3 font-bold text-white">Xem tài liệu sản phẩm</a>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#071a15] px-5 py-8 text-white/60">
+      <footer className="bg-[#0a0a0a] px-5 py-8 text-white/60">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 md:flex-row">
           <p>© AQURON 2000. Giải pháp xử lý bê tông, kiểm soát ẩm và chống thấm từ bên trong.</p>
           <p>Tư vấn và triển khai công trình trên toàn quốc.</p>
