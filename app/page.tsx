@@ -306,10 +306,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(200,16,46,0.10),transparent_45%),radial-gradient(circle_at_85%_15%,rgba(200,16,46,0.08),transparent_45%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-[1.08fr_0.92fr] md:py-28">
           <div className="flex flex-col justify-center">
-            <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[#c8102e]/30 bg-[#fff5f6] px-4 py-2 text-sm font-semibold text-[#c8102e]">
+            <div className="mb-5 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-[#c8102e]/30 bg-[#fff5f6] px-4 py-2 text-sm font-semibold text-[#c8102e]">
               <span className="inline-block h-2 w-2 rounded-full bg-[#c8102e]" />
-              Hệ sản phẩm chống thấm • Tư vấn đúng hạng mục
-            </p>
+              <span>Sản phẩm nhập khẩu 100% từ Mỹ, Úc</span>
+              <span className="hidden text-[#c8102e]/45 sm:inline">•</span>
+              <span className="inline-flex flex-wrap items-center gap-1.5">
+                {["Tech-Dry®", "MagicGRIP", "RussTech", "EMS", "MARKHAM"].map((brand) => (
+                  <span key={brand} className="rounded-full border border-[#c8102e]/20 bg-white px-2 py-0.5 text-[11px] font-bold leading-5 text-[#1a1a1a] shadow-sm">
+                    {brand}
+                  </span>
+                ))}
+              </span>
+            </div>
             <h1 className="font-serif text-5xl font-semibold uppercase leading-[0.96] tracking-tight text-[#1a1a1a] md:text-7xl">
               CHỐNG THẤM NANO CHUẨN CÔNG NGHỆ ÚC.
             </h1>
@@ -370,20 +378,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="Thương hiệu hóa chất nhập khẩu" className="border-b border-black/10 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c8102e]">
-            Sản phẩm nhập khẩu 100% từ Mỹ, Úc
-          </p>
-          <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-[#1a1a1a]">
-            {["Tech-Dry®", "MagicGRIP", "RussTech", "EMS", "MARKHAM"].map((brand) => (
-              <span key={brand} className="rounded-full border border-[#1a1a1a]/15 bg-[#fafafa] px-3 py-1.5 shadow-sm">
-                {brand}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="loi-ich" className="mx-auto max-w-7xl px-5 py-20">
         <div className="max-w-3xl">
