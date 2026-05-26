@@ -370,6 +370,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section aria-label="Thương hiệu hóa chất nhập khẩu" className="border-b border-black/10 bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c8102e]">
+            Sản phẩm nhập khẩu 100% từ Mỹ, Úc
+          </p>
+          <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-[#1a1a1a]">
+            {["Tech-Dry®", "MagicGRIP", "RussTech", "EMS", "MARKHAM"].map((brand) => (
+              <span key={brand} className="rounded-full border border-[#1a1a1a]/15 bg-[#fafafa] px-3 py-1.5 shadow-sm">
+                {brand}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="loi-ich" className="mx-auto max-w-7xl px-5 py-20">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Lợi ích chính</p>
