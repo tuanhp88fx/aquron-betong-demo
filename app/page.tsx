@@ -216,30 +216,35 @@ const technicalTopics = [
 const importBrands = [
   {
     brand: "Tech-Dry®",
+    logo: "/brands/tech-dry.png",
     company: "Tech Dry Building Protection System Pty Ltd",
     origin: "Melbourne, Victoria, Australia",
     note: "Hệ sản phẩm bảo vệ và chống thấm vật liệu xây dựng."
   },
   {
     brand: "MagicGRIP",
+    logo: "/brands/magicgrip.png",
     company: "MagicGRIP International Pty Ltd",
     origin: "Sydney, NSW, Australia",
     note: "Giải pháp phụ trợ thi công và hoàn thiện bề mặt."
   },
   {
-    brand: "RussTech, Inc.",
+    brand: "RussTech",
+    logo: "/brands/russtech.png",
     company: "RussTech Inc",
     origin: "Kentucky, United States of America",
     note: "Phụ gia và giải pháp kỹ thuật bê tông từ Mỹ."
   },
   {
     brand: "EMS",
+    logo: "/brands/ems.png",
     company: "Environmental Manufacturing Solutions Distribution, LLC",
     origin: "Melbourne, Florida 32904, United States of America",
     note: "Giải pháp sản xuất và phân phối vật liệu chuyên dụng."
   },
   {
     brand: "MARKHAM",
+    logo: "/brands/markham.png",
     company: "Markham Global UK, Australia, NZ",
     origin: "43 Niven Street, Onekawa, Napier 4110",
     note: "Thương hiệu AQURON / CONQOR, công nghệ xử lý bê tông thẩm thấu."
@@ -307,13 +312,13 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-[1.08fr_0.92fr] md:py-28">
           <div className="flex flex-col justify-center">
             <div className="mb-5 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-[#c8102e]/30 bg-[#fff5f6] px-4 py-2 text-sm font-semibold text-[#c8102e]">
-              <span className="inline-block h-2 w-2 rounded-full bg-[#c8102e]" />
               <span>Sản phẩm nhập khẩu 100% từ Mỹ, Úc</span>
               <span className="hidden text-[#c8102e]/45 sm:inline">•</span>
               <span className="inline-flex flex-wrap items-center gap-1.5">
-                {["Tech-Dry®", "MagicGRIP", "RussTech", "EMS", "MARKHAM"].map((brand) => (
-                  <span key={brand} className="rounded-full border border-[#c8102e]/20 bg-white px-2 py-0.5 text-[11px] font-bold leading-5 text-[#1a1a1a] shadow-sm">
-                    {brand}
+                {importBrands.map((brand) => (
+                  <span key={brand.brand} className="inline-flex h-7 items-center gap-1.5 rounded-full border border-[#c8102e]/20 bg-white px-2 py-0.5 text-[11px] font-bold leading-5 text-[#1a1a1a] shadow-sm">
+                    <img src={brand.logo} alt={brand.brand} className="max-h-4 max-w-[52px] object-contain" />
+                    <span className="hidden sm:inline">{brand.brand}</span>
                   </span>
                 ))}
               </span>
@@ -439,7 +444,10 @@ export default function Home() {
                 <article key={item.brand} className="rounded-2xl border border-[#1a1a1a]/10 bg-white p-4 shadow-sm">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <h3 className="text-xl font-bold text-[#1a1a1a]">{item.brand}</h3>
+                      <div className="flex items-center gap-3">
+                        <img src={item.logo} alt={item.brand} className="h-8 w-20 object-contain object-left" />
+                        <h3 className="text-xl font-bold text-[#1a1a1a]">{item.brand}</h3>
+                      </div>
                       <p className="mt-1 text-sm font-medium text-[#4d5e56]">{item.company}</p>
                     </div>
                     <span className="rounded-full bg-[#c8102e] px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-white">{item.origin.includes("United States") ? "Mỹ" : "Úc / NZ"}</span>
