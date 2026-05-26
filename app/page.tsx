@@ -212,6 +212,40 @@ const technicalTopics = [
   },
 ]
 
+
+const importBrands = [
+  {
+    brand: "Tech-Dry®",
+    company: "Tech Dry Building Protection System Pty Ltd",
+    origin: "Melbourne, Victoria, Australia",
+    note: "Hệ sản phẩm bảo vệ và chống thấm vật liệu xây dựng."
+  },
+  {
+    brand: "MagicGRIP",
+    company: "MagicGRIP International Pty Ltd",
+    origin: "Sydney, NSW, Australia",
+    note: "Giải pháp phụ trợ thi công và hoàn thiện bề mặt."
+  },
+  {
+    brand: "RussTech, Inc.",
+    company: "RussTech Inc",
+    origin: "Kentucky, United States of America",
+    note: "Phụ gia và giải pháp kỹ thuật bê tông từ Mỹ."
+  },
+  {
+    brand: "EMS",
+    company: "Environmental Manufacturing Solutions Distribution, LLC",
+    origin: "Melbourne, Florida 32904, United States of America",
+    note: "Giải pháp sản xuất và phân phối vật liệu chuyên dụng."
+  },
+  {
+    brand: "MARKHAM",
+    company: "Markham Global UK, Australia, NZ",
+    origin: "43 Niven Street, Onekawa, Napier 4110",
+    note: "Thương hiệu AQURON / CONQOR, công nghệ xử lý bê tông thẩm thấu."
+  },
+]
+
 const productGallery = [
   {
     name: "AQURON 2000",
@@ -261,7 +295,7 @@ export default function Home() {
           </nav>
           <a
             href="tel:0904128909"
-            className="rounded-full bg-[#1a1a1a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#111111]"
+            className="rounded-full bg-[#c8102e] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#a00d24]"
           >
             Gọi 0904 128 909
           </a>
@@ -308,7 +342,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#lien-he" className="rounded-full bg-[#1a1a1a] px-6 py-3 text-center font-semibold text-white shadow-lg shadow-[#1a1a1a]/20 hover:bg-[#111111]">
+              <a href="#lien-he" className="rounded-full bg-[#c8102e] px-6 py-3 text-center font-semibold text-white shadow-lg shadow-[#c8102e]/25 hover:bg-[#a00d24]">
                 Gọi tư vấn ngay
               </a>
               <a href="tel:0904128909" className="rounded-full border border-[#1a1a1a]/25 bg-white/70 px-6 py-3 text-center font-semibold text-[#1a1a1a] hover:bg-white">
@@ -343,7 +377,7 @@ export default function Home() {
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
-            <div key={value} className="rounded-3xl border border-[#1a1a1a]/15 bg-[#1a1a1a] p-6 text-white shadow-sm">
+            <div key={value} className="rounded-3xl border border-[#c8102e]/30 bg-[#c8102e] p-6 text-white shadow-sm">
               <p className="font-serif text-4xl font-semibold">{value}</p>
               <p className="mt-2 text-sm leading-6 text-white/78">{label}</p>
             </div>
@@ -362,8 +396,8 @@ export default function Home() {
       <section id="san-pham-list" className="mx-auto max-w-7xl px-5 pb-10">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Dòng sản phẩm chính</p>
-          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Hệ sản phẩm chống thấm công nghệ Úc.</h2>
-          <p className="mt-4 leading-7 text-[#4d5e56]">Mỗi sản phẩm phục vụ một nhu cầu khác nhau: xử lý bề mặt, chống ăn mòn cốt thép, phụ gia bê tông mới, hay sản phẩm sản cầu thấm không tạo màng.</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Hệ sản phẩm chống thấm nhập khẩu 100% từ nước ngoài.</h2>
+          <p className="mt-4 leading-7 text-[#4d5e56]">Danh mục tập trung các thương hiệu từ Úc và Mỹ như MARKHAM/AQURON, Tech-Dry, MagicGRIP, RussTech và EMS. Mỗi sản phẩm phục vụ một nhu cầu khác nhau: xử lý bề mặt, chống ăn mòn cốt thép, phụ gia bê tông mới, hay sản phẩm sealer thẩm thấu không tạo màng.</p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {productGallery.map((p) => (
@@ -375,10 +409,38 @@ export default function Home() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8102e]">{p.tag}</p>
                 <h3 className="mt-2 font-serif text-2xl font-semibold text-[#1a1a1a]">{p.name}</h3>
                 <p className="mt-2 flex-1 text-sm leading-6 text-[#4d5e56]">{p.text}</p>
-                <span className="mt-4 inline-flex w-fit rounded-full bg-[#1a1a1a] px-4 py-2 text-xs font-semibold text-white">Xem hạng mục · tư vấn</span>
+                <span className="mt-4 inline-flex w-fit rounded-full bg-[#c8102e] px-4 py-2 text-xs font-semibold text-white">Xem hạng mục · tư vấn</span>
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+
+      <section id="thuong-hieu" className="mx-auto max-w-7xl px-5 pb-20">
+        <div className="rounded-[2rem] border border-[#c8102e]/20 bg-[#fff7f8] p-8 shadow-sm md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Thương hiệu nhập khẩu</p>
+              <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Sản phẩm chống thấm nhập khẩu 100% từ Úc và Mỹ.</h2>
+              <p className="mt-5 leading-7 text-[#58675f]">Nguồn hàng chọn lọc từ các nhà sản xuất nước ngoài, ưu tiên công nghệ thẩm thấu sâu vào mao mạch bê tông, khóa lỗ rỗng từ bên trong — không tạo màng nên hạn chế bong tróc, phồng rộp như lớp phủ bề mặt.</p>
+            </div>
+            <div className="grid gap-3">
+              {importBrands.map((item) => (
+                <article key={item.brand} className="rounded-2xl border border-[#1a1a1a]/10 bg-white p-4 shadow-sm">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#1a1a1a]">{item.brand}</h3>
+                      <p className="mt-1 text-sm font-medium text-[#4d5e56]">{item.company}</p>
+                    </div>
+                    <span className="rounded-full bg-[#c8102e] px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-white">{item.origin.includes("United States") ? "Mỹ" : "Úc / NZ"}</span>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-[#65726c]">{item.origin}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#4d5e56]">{item.note}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -391,7 +453,7 @@ export default function Home() {
             {workScopes.map((scope) => (
               <article id={scope.id} key={scope.surface} className="scroll-mt-24 rounded-3xl border border-[#1a1a1a]/12 bg-[#ffffff] p-5 shadow-sm transition target:border-[#1a1a1a]/45 target:bg-white target:shadow-xl">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-white">{scope.product}</span>
+                  <span className="rounded-full bg-[#c8102e] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-white">{scope.product}</span>
                   <span className="rounded-full border border-[#1a1a1a]/15 bg-white/70 px-3 py-1 text-xs font-semibold text-[#1a1a1a]">Dễ tư vấn theo hạng mục</span>
                 </div>
                 <h3 className="mt-4 text-2xl font-bold text-[#1a1a1a]">{scope.surface}</h3>
@@ -453,7 +515,7 @@ export default function Home() {
               <div className="p-5">
                 <h3 className="font-bold text-[#1a1a1a]">{topic.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#65726c]">{topic.text}</p>
-                <p className="mt-4 inline-flex rounded-full bg-[#1a1a1a] px-4 py-2 text-sm font-semibold text-white">{topic.cta}</p>
+                <p className="mt-4 inline-flex rounded-full bg-[#1a1a1a]/30 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/40">{topic.cta}</p>
               </div>
             </a>
           ))}
@@ -484,7 +546,7 @@ export default function Home() {
             <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Video sản phẩm, quy trình thi công và hình ảnh công trình thực tế.</h2>
             <p className="mt-4 leading-7 text-[#58675f]">Tổng hợp video giới thiệu sản phẩm, quy trình phun và hình ảnh công trình thực tế. Phần video test chống thấm/khóa ẩm đã được bỏ để trang gọn và tập trung hơn.</p>
           </div>
-          <a href="#lien-he" className="rounded-full bg-[#1a1a1a] px-6 py-3 text-center font-semibold text-white">Tư vấn qua Zalo/Điện thoại</a>
+          <a href="#lien-he" className="rounded-full bg-[#c8102e] px-6 py-3 text-center font-semibold text-white">Tư vấn qua Zalo/Điện thoại</a>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {videos.map((video) => (
@@ -509,7 +571,7 @@ export default function Home() {
           <div className="space-y-4">
             {process.map((item, idx) => (
               <div key={item} className="flex gap-4 rounded-2xl border border-black/10 bg-[#ffffff] p-5">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1a1a1a] font-bold text-white">{idx + 1}</div>
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#c8102e] font-bold text-white">{idx + 1}</div>
                 <p className="leading-7 text-[#4d5e56]">{item}</p>
               </div>
             ))}
