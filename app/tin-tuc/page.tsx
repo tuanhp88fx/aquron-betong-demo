@@ -42,59 +42,50 @@ export default function TinTucPage() {
             <p className="mt-2 text-base text-[#4d5e56]">
               Anh em ghé lại sau, mình đang cập nhật tin tức công trình và hoạt động thường xuyên ở đây.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="tel:0904128909"
-                className="rounded-full bg-[#c8102e] px-6 py-3 font-semibold text-white shadow-lg shadow-[#c8102e]/25 hover:bg-[#a00d24]"
-              >
-                Gọi tư vấn: 0904 128 909
-              </a>
-              <Link
-                href="/"
-                className="rounded-full border border-[#1a1a1a]/25 bg-white px-6 py-3 font-semibold text-[#1a1a1a] hover:bg-[#fdf2f3]"
-              >
-                Quay lại trang chủ
-              </Link>
-            </div>
           </div>
         ) : (
           <ul className="grid gap-6 md:grid-cols-2">
             {items.map((item) => (
-              <li
-                key={item.slug}
-                className="group overflow-hidden rounded-2xl border border-[#1a1a1a]/10 bg-white shadow-sm transition hover:border-[#c8102e]/30 hover:shadow-md"
-              >
-                {item.youtubeId ? (
-                  <div className="aspect-[9/16] w-full overflow-hidden bg-black sm:aspect-video">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${item.youtubeId}`}
-                      title={item.title}
-                      className="h-full w-full"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
+              <li key={item.slug}>
+                <Link
+                  href={`/tin-tuc/${item.slug}`}
+                  className="group block overflow-hidden rounded-2xl border border-[#1a1a1a]/10 bg-white shadow-sm transition hover:border-[#c8102e]/30 hover:shadow-md"
+                >
+                  {item.youtubeId ? (
+                    <div className="aspect-[9/16] w-full overflow-hidden bg-black sm:aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${item.youtubeId}`}
+                        title={item.title}
+                        className="h-full w-full pointer-events-none"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  ) : item.cover ? (
+                    <div className="aspect-[16/9] w-full overflow-hidden bg-[#fdf2f3]">
+                      <img
+                        src={item.cover}
+                        alt={item.title}
+                        className="h-full w-full object-cover transition group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="p-5">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
+                      {item.date}
+                    </p>
+                    <h2 className="mt-2 text-xl font-semibold leading-snug text-[#1a1a1a]">
+                      {item.title}
+                    </h2>
+                    <p className="mt-3 text-sm leading-6 text-[#4d5e56]">
+                      {item.summary}
+                    </p>
+                    <p className="mt-4 text-sm font-bold text-[#c8102e]">
+                      Xem chi tiết ảnh/video →
+                    </p>
                   </div>
-                ) : item.cover ? (
-                  <div className="aspect-[16/9] w-full overflow-hidden bg-[#fdf2f3]">
-                    <img
-                      src={item.cover}
-                      alt={item.title}
-                      className="h-full w-full object-cover transition group-hover:scale-[1.02]"
-                    />
-                  </div>
-                ) : null}
-                <div className="p-5">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
-                    {item.date}
-                  </p>
-                  <h2 className="mt-2 text-xl font-semibold leading-snug text-[#1a1a1a]">
-                    {item.title}
-                  </h2>
-                  <p className="mt-3 text-sm leading-6 text-[#4d5e56]">
-                    {item.summary}
-                  </p>
-                </div>
+                </Link>
               </li>
             ))}
           </ul>
