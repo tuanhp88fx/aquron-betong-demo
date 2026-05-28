@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { newsItems } from "./data";
 
@@ -45,11 +45,11 @@ export default function TinTucPage() {
           </div>
         ) : (
           <ul className="grid gap-6 md:grid-cols-2">
-            {items.map((item) => (
-              <li key={item.slug}>
+            {items.map((item, index) => (
+              <li key={item.slug} className={index === 0 ? "md:col-span-2" : undefined}>
                 <Link
                   href={`/tin-tuc/${item.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-[#1a1a1a]/10 bg-white shadow-sm transition hover:border-[#c8102e]/30 hover:shadow-md"
+                  className={`group block overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:border-[#c8102e]/30 hover:shadow-md ${index === 0 ? "border-[#c8102e]/30 ring-1 ring-[#c8102e]/10" : "border-[#1a1a1a]/10"}`}
                 >
                   {item.youtubeId ? (
                     <div className="aspect-[9/16] w-full overflow-hidden bg-black sm:aspect-video">
@@ -94,3 +94,4 @@ export default function TinTucPage() {
     </main>
   );
 }
+

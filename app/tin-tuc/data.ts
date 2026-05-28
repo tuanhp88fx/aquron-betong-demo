@@ -1,4 +1,4 @@
-﻿export type NewsItem = {
+export type NewsItem = {
   slug: string;
   title: string;
   date: string;
@@ -11,12 +11,12 @@
 export const newsItems: NewsItem[] = [
   {
     slug: "vinacontrol-test",
-    title: "Báo cáo kiểm định Vinacontrol cho AQURON 2000",
+    title: "Kiểm định chất lượng",
     date: "26/05/2026",
     summary:
-      "Mẫu bê tông phun AQURON 2000 đã đạt kết quả kiểm định độc lập tại Vinacontrol. Hoạt chất thấm sâu mao mạch, khóa lỗ rỗng từ trong, không tạo màng nên không lo bong tróc theo thời gian.",
+      "Tổng hợp phiếu kết quả thử nghiệm Vinacontrol cho các vật liệu chống thấm công nghệ Úc như Waterpel/AQURON. Kết quả thể hiện hiệu quả giảm hút nước rõ rệt, phù hợp định hướng chống thấm thẩm thấu sâu, khóa lỗ rỗng từ bên trong bê tông.",
     cover: "/news/vinacontrol-test/cover.jpg",
-    gallery: ["/news/vinacontrol-test/01.jpg", "/news/vinacontrol-test/02.jpg", "/news/vinacontrol-test/03.jpg", "/news/vinacontrol-test/04.jpg", "/news/vinacontrol-test/05.jpg", "/news/vinacontrol-test/06.jpg", "/news/vinacontrol-test/07.jpg", "/news/vinacontrol-test/08.jpg"],
+    gallery: ["/news/vinacontrol-test/01.jpg", "/news/vinacontrol-test/02.jpg", "/news/vinacontrol-test/03.jpg", "/news/vinacontrol-test/04.jpg", "/news/vinacontrol-test/05.jpg"],
   },
   {
     slug: "cau-binh-khanh",
@@ -118,5 +118,6 @@ export const newsItems: NewsItem[] = [
     youtubeId: "VhgFk_knUeE",
   },
 ];
+
 
 
