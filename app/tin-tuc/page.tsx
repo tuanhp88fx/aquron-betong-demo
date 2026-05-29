@@ -72,9 +72,11 @@ export default function TinTucPage() {
                     </div>
                   ) : null}
                   <div className="p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
-                      {item.date}
-                    </p>
+                    {item.date ? (
+                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
+                        {item.date}
+                      </p>
+                    ) : null}
                     <h2 className="mt-2 text-xl font-semibold leading-snug text-[#1a1a1a]">
                       {item.title}
                     </h2>

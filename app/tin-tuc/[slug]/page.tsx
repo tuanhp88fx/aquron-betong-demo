@@ -42,9 +42,11 @@ export default function TinTucDetailPage({ params }: Props) {
         </nav>
 
         <header className="mb-8">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
-            {item.date}
-          </p>
+          {item.date ? (
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8102e]">
+              {item.date}
+            </p>
+          ) : null}
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-5xl">
             {item.title}
           </h1>

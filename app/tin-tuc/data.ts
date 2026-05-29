@@ -1,7 +1,7 @@
 export type NewsItem = {
   slug: string;
   title: string;
-  date: string;
+  date?: string;
   summary: string;
   cover?: string;
   youtubeId?: string;
@@ -12,7 +12,6 @@ export const newsItems: NewsItem[] = [
   {
     slug: "vinacontrol-test",
     title: "Kiểm định chất lượng",
-    date: "26/05/2026",
     summary:
       "Tổng hợp phiếu kết quả thử nghiệm Vinacontrol cho các vật liệu chống thấm công nghệ Úc như Waterpel/AQURON. Kết quả thể hiện hiệu quả giảm hút nước rõ rệt, phù hợp định hướng chống thấm thẩm thấu sâu, khóa lỗ rỗng từ bên trong bê tông.",
     cover: "/news/vinacontrol-test/cover.jpg",
