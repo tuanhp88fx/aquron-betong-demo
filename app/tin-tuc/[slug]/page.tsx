@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeoKeywordsStrip from "@/components/seo-keywords-strip";
 import { notFound } from "next/navigation";
 import { newsItems } from "../data";
 
 type Props = {
   params: { slug: string };
 };
+
+const detailSeoKeywords = [
+  "chống thấm nano",
+  "video chống thấm",
+  "công trình chống thấm",
+  "AQURON 2000",
+  "chống thấm công nghệ Úc",
+];
 
 export function generateStaticParams() {
   return newsItems.map((item) => ({ slug: item.slug }));
@@ -112,6 +121,7 @@ export default function TinTucDetailPage({ params }: Props) {
           </div>
         </div>
       </article>
+      <SeoKeywordsStrip keywords={detailSeoKeywords} />
     </main>
   );
 }

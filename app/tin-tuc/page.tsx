@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import SeoKeywordsStrip from "@/components/seo-keywords-strip";
 import { newsItems } from "./data";
 
 export const metadata: Metadata = {
@@ -9,6 +10,14 @@ export const metadata: Metadata = {
 };
 
 const items = newsItems;
+
+const newsSeoKeywords = [
+  "tin tức chống thấm",
+  "công trình chống thấm",
+  "chống thấm nano",
+  "AQURON 2000",
+  "chống thấm công nghệ Úc",
+];
 
 export default function TinTucPage() {
   return (
@@ -93,6 +102,7 @@ export default function TinTucPage() {
           </ul>
         )}
       </section>
+      <SeoKeywordsStrip keywords={newsSeoKeywords} />
     </main>
   );
 }

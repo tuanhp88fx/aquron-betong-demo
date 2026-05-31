@@ -18,6 +18,14 @@ export const newsItems: NewsItem[] = [
     gallery: ["/news/vinacontrol-test/01.jpg", "/news/vinacontrol-test/02.jpg", "/news/vinacontrol-test/03.jpg", "/news/vinacontrol-test/04.jpg", "/news/vinacontrol-test/05.jpg"],
   },
   {
+    slug: "nhap-hang-30-05-2026",
+    title: "Nhập hàng ngày 30/5/2026",
+    date: "30/05/2026",
+    summary:
+      "Video ghi nhận nhập hàng ngày 30/5/2026 cho đội Chống Thấm Nano Công Nghệ Úc. Đảm bảo nguồn hàng chính hãng nhập khẩu, sẵn sàng triển khai cho các công trình mới.",
+    youtubeId: "XGHisi6-wCg",
+  },
+  {
     slug: "cau-binh-khanh",
     title: "Cầu Bình Khánh - 1.000 lít AQURON 2000 cho mố cầu, dầm và mối nối",
     date: "20/05/2026",
