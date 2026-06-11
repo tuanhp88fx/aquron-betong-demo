@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useLayoutEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -10,22 +10,25 @@ if (typeof window !== "undefined") {
 
 type Props = {
   children: React.ReactNode
-  className?: string
   /** Animate direct children with a stagger instead of the wrapper itself. */
   stagger?: boolean
   /** Vertical offset (px) the element starts from. */
   y?: number
   delay?: number
+  className?: string
 }
 
 /**
  * Reveal-on-scroll wrapper using GSAP + ScrollTrigger.
+ * - useLayoutEffect + immediate gsap.set hides targets before the browser
+ *   paints, so there is no flash of already-visible content on load.
+ * - start "top 85%" reveals each block as it scrolls into view, not early.
  * Respects prefers-reduced-motion (no motion, just visible).
  */
 export function Reveal({ children, className, stagger = false, y = 40, delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = ref.current
     if (!el) return
 
@@ -38,20 +41,21 @@ export function Reveal({ children, className, stagger = false, y = 40, delay = 0
     }
 
     const ctx = gsap.context(() => {
-      gsap.from(targets, {
-        opacity: 0,
-        y,
+      // Hide immediately (before paint) to avoid the flash-then-reveal glitch.
+      gsap.set(targets, { opacity: 0, y })
+
+      gsap.to(targets, {
+        opacity: 1,
+        y: 0,
         duration: 0.7,
         delay,
         ease: "power3.out",
         stagger: stagger ? 0.12 : 0,
         scrollTrigger: {
           trigger: el,
-          start: "top 90%",
+          start: "top 75%",
           toggleActions: "play none none none",
           once: true,
-          // Recalculate positions to avoid wrong start when images/videos
-          // above finish loading and push the layout down.
           invalidateOnRefresh: true,
         },
       })

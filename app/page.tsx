@@ -477,7 +477,7 @@ export default function Home() {
               <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Sản phẩm chống thấm nhập khẩu 100% từ Úc và Mỹ.</h2>
               <p className="mt-5 leading-7 text-[#58675f]">Nguồn hàng chọn lọc từ các nhà sản xuất nước ngoài, ưu tiên công nghệ thẩm thấu sâu vào mao mạch bê tông, khóa lỗ rỗng từ bên trong — không tạo màng nên hạn chế bong tróc, phồng rộp như lớp phủ bề mặt.</p>
             </div>
-            <div className="grid gap-3">
+            <Reveal stagger className="grid gap-3">
               {importBrands.map((item) => (
                 <article key={item.brand} className="rounded-2xl border border-[#1a1a1a]/10 bg-white p-4 shadow-sm">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
@@ -494,7 +494,7 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-6 text-[#4d5e56]">{item.note}</p>
                 </article>
               ))}
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

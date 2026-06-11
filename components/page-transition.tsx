@@ -81,7 +81,7 @@ export function PageTransition() {
       style={{ display: "none", opacity: 0, visibility: "hidden" }}
       className="pointer-events-none fixed inset-0 z-[100] items-center justify-center bg-black"
     >
-      <span className="font-serif text-2xl font-semibold uppercase tracking-[0.3em] text-[#c8102e] md:text-4xl">
+      <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="text-2xl font-semibold uppercase tracking-[0.3em] text-[#c8102e] md:text-4xl">
         Chống Thấm Nano
       </span>
     </div>
