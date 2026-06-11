@@ -2,6 +2,11 @@ import SeoKeywordsStrip from "@/components/seo-keywords-strip"
 import { heroVideo, projectVideos } from "@/lib/media"
 import { YoutubeHero } from "@/components/youtube-hero"
 import { YoutubeCard } from "@/components/youtube-card"
+import { YoutubeLoopShort } from "@/components/youtube-loop-short"
+import { Reveal } from "@/components/reveal"
+import { HeroIntro } from "@/components/hero-intro"
+import { Float } from "@/components/float"
+import { TransitionLink } from "@/components/transition-link"
 
 const homeSeoKeywords = [
   "chống thấm nano",
@@ -325,6 +330,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(200,16,46,0.10),transparent_45%),radial-gradient(circle_at_85%_15%,rgba(200,16,46,0.08),transparent_45%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-[1.08fr_0.92fr] md:py-28">
           <div className="flex flex-col justify-center">
+            <HeroIntro className="flex flex-col">
             <div className="mb-5 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-[#c8102e]/30 bg-[#fff5f6] px-4 py-2 text-sm font-semibold text-[#c8102e]">
               <span>Sản phẩm nhập khẩu 100% từ Mỹ, Úc</span>
               <span className="hidden text-[#c8102e]/45 sm:inline">•</span>
@@ -376,36 +382,41 @@ export default function Home() {
                 <span>Gọi tư vấn:</span>
                 <span className="font-bold tracking-wide">0904 128 909</span>
               </a>
-              <a
+              <TransitionLink
                 href="/tin-tuc"
                 className="flex items-center justify-center rounded-full border-2 border-[#c8102e] bg-white px-8 py-4 text-center text-xl font-bold uppercase tracking-wide text-[#c8102e] shadow-md transition hover:bg-[#c8102e] hover:text-white sm:text-2xl"
               >
                 Tin tức hoạt động
-              </a>
-              <a
+              </TransitionLink>
+              <TransitionLink
                 href="/video-test-chong-nuoc"
                 className="flex items-center justify-center rounded-full border-2 border-[#c8102e] bg-white px-8 py-4 text-center text-xl font-bold uppercase tracking-wide text-[#c8102e] shadow-md transition hover:bg-[#c8102e] hover:text-white sm:text-2xl"
               >
                 Video test chống nước thực tế
-              </a>
+              </TransitionLink>
             </div>
+            </HeroIntro>
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#c8102e]/15 via-transparent to-[#c8102e]/10 blur-2xl" />
-            <div className="relative rounded-[2rem] border border-[#c8102e]/15 bg-white p-4 shadow-2xl shadow-[#c8102e]/10">
-              <div className="relative overflow-hidden rounded-[1.25rem]">
+            <Float amplitude={10} duration={4} className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#c8102e]/15 via-transparent to-[#c8102e]/10 blur-2xl" />
+            <Reveal y={28} className="relative rounded-[2rem] border border-[#c8102e]/15 bg-white p-4 shadow-2xl shadow-[#c8102e]/10">
+              <div className="mb-3 overflow-hidden rounded-[1.25rem]">
                 <img
-                  src="/aquron-2000-banner.jpg"
-                  alt="AQURON 2000 - Ultimate Concrete Treatment"
+                  src="/tin-tuc-vinh-phuc.png"
+                  alt="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc"
                   className="block h-auto w-full"
                 />
               </div>
-              <div className="mt-4 flex flex-col gap-1 px-2 pb-2">
-                <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8102e]">Sản phẩm chủ lực</p>
-                <p className="text-base text-[#1a1a1a]/80">Hydrogel colloidal silica công nghệ Úc, thấm sâu tới 150mm vào bê tông — bảo vệ kết cấu từ bên trong.</p>
+              <div className="grid grid-cols-2 gap-3">
+                <YoutubeLoopShort youtubeId="jfljg0x4lfs" title="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc 1" />
+                <YoutubeLoopShort youtubeId="9onQ5hqS5YE" title="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc 2" />
               </div>
-            </div>
+              <div className="mt-4 flex flex-col gap-1.5 px-2 pb-2">
+                <p className="text-xl font-extrabold uppercase tracking-[0.3em] text-[#c8102e] md:text-2xl">Tin tức nổi bật</p>
+                <p className="text-base text-[#1a1a1a]/80 md:text-lg">Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc.</p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -416,22 +427,22 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#c8102e]">Lợi ích chính</p>
           <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Giá hợp lý, thi công nhanh, nhận triển khai toàn quốc, chống thấm bền lâu nhờ hoạt chất nằm trong mao mạch bê tông.</h2>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <Reveal stagger className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
             <div key={value} className="rounded-3xl border border-[#c8102e]/30 bg-[#c8102e] p-6 text-white shadow-sm">
               <p className="font-serif text-4xl font-semibold">{value}</p>
               <p className="mt-2 text-sm leading-6 text-white/78">{label}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        </Reveal>
+        <Reveal stagger className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((item) => (
             <article key={item.title} className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm">
               <h3 className="text-xl font-bold text-[#1a1a1a]">{item.title}</h3>
               <p className="mt-3 leading-7 text-[#58675f]">{item.text}</p>
             </article>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section id="san-pham-list" className="mx-auto max-w-7xl px-5 pb-10">
@@ -440,7 +451,7 @@ export default function Home() {
           <h2 className="mt-3 font-serif text-4xl font-semibold text-[#1a1a1a] md:text-5xl">Hệ sản phẩm chống thấm nhập khẩu 100% từ nước ngoài.</h2>
           <p className="mt-4 leading-7 text-[#4d5e56]">Danh mục tập trung các thương hiệu từ Úc và Mỹ như MARKHAM/AQURON, Tech-Dry, MagicGRIP, RussTech và EMS. Mỗi sản phẩm phục vụ một nhu cầu khác nhau: xử lý bề mặt, chống ăn mòn cốt thép, phụ gia bê tông mới, hay sản phẩm sealer thẩm thấu không tạo màng.</p>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {productGallery.map((p) => (
             <a key={p.name} href={p.href} className="group flex flex-col overflow-hidden rounded-3xl border border-[#1a1a1a]/12 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
               <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#fbe9eb] p-5">
@@ -454,7 +465,7 @@ export default function Home() {
               </div>
             </a>
           ))}
-        </div>
+        </Reveal>
       </section>
 
 

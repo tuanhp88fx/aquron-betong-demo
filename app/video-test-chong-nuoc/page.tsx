@@ -10,6 +10,10 @@ export const metadata: Metadata = {
 
 const videos = [
   {
+    title: "Video test chống nước thực tế 03",
+    youtubeId: "oGFsvc6-9R4",
+  },
+  {
     title: "Video test chống nước thực tế 01",
     youtubeId: "tVBU-7HIBsk",
   },

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
+import { PageTransition } from "@/components/page-transition"
 import "./globals.css"
 
 const GA_MEASUREMENT_ID = "G-R2M2R4TD0C"
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-sans antialiased">
+        <PageTransition />
         {children}
         <Analytics />
         <Script
