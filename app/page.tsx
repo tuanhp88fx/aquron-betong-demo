@@ -2,7 +2,6 @@ import SeoKeywordsStrip from "@/components/seo-keywords-strip"
 import { heroVideo, projectVideos } from "@/lib/media"
 import { YoutubeHero } from "@/components/youtube-hero"
 import { YoutubeCard } from "@/components/youtube-card"
-import { YoutubeLoopShort } from "@/components/youtube-loop-short"
 import { Reveal } from "@/components/reveal"
 import { HeroIntro } from "@/components/hero-intro"
 import { Float } from "@/components/float"
@@ -401,21 +400,34 @@ export default function Home() {
           <div className="relative">
             <Float amplitude={10} duration={4} className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#c8102e]/15 via-transparent to-[#c8102e]/10 blur-2xl" />
             <Reveal y={28} className="relative rounded-[2rem] border border-[#c8102e]/15 bg-white p-4 shadow-2xl shadow-[#c8102e]/10">
-              <div className="mb-3 overflow-hidden rounded-[1.25rem]">
+              <div className="flex flex-col gap-1.5 px-2 pt-1">
+                <p className="text-xl font-extrabold uppercase tracking-[0.3em] text-[#c8102e] md:text-2xl">Tin tức nổi bật</p>
+                <p className="text-base font-semibold text-[#1a1a1a] md:text-lg">Kết quả kiểm định mới nhất: AQURON 2000 nâng cấp chống thấm bê tông từ W6 lên W12.</p>
+              </div>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                <div className="rounded-2xl border border-[#c8102e]/20 bg-[#fff5f6] p-3 text-center">
+                  <p className="font-serif text-2xl font-bold leading-none text-[#c8102e] md:text-3xl">W6 → W12</p>
+                  <p className="mt-1 text-[11px] font-medium leading-4 text-[#1a1a1a]/70">Cấp chống thấm nước (TCVN 3116:2022)</p>
+                </div>
+                <div className="rounded-2xl border border-[#c8102e]/20 bg-[#fff5f6] p-3 text-center">
+                  <p className="font-serif text-2xl font-bold leading-none text-[#c8102e] md:text-3xl">Mohs 3 → 4</p>
+                  <p className="mt-1 text-[11px] font-medium leading-4 text-[#1a1a1a]/70">Độ cứng bề mặt bê tông M250</p>
+                </div>
+                <div className="rounded-2xl border border-[#c8102e]/20 bg-[#fff5f6] p-3 text-center">
+                  <p className="font-serif text-2xl font-bold leading-none text-[#c8102e] md:text-3xl">09/06/2026</p>
+                  <p className="mt-1 text-[11px] font-medium leading-4 text-[#1a1a1a]/70">Phiếu kết quả OPACONTROL</p>
+                </div>
+              </div>
+              <div className="mt-3 overflow-hidden rounded-[1.25rem] border border-[#1a1a1a]/10">
                 <img
-                  src="/tin-tuc-vinh-phuc.png"
-                  alt="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc"
+                  src="/news/kiem-dinh-2026/phieu-ket-qua.png"
+                  alt="Phiếu kết quả thử nghiệm AQURON 2000 - OPACONTROL, cấp chống thấm W12, độ cứng Mohs 4"
                   className="block h-auto w-full"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <YoutubeLoopShort youtubeId="jfljg0x4lfs" title="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc 1" />
-                <YoutubeLoopShort youtubeId="9onQ5hqS5YE" title="Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc 2" />
-              </div>
-              <div className="mt-4 flex flex-col gap-1.5 px-2 pb-2">
-                <p className="text-xl font-extrabold uppercase tracking-[0.3em] text-[#c8102e] md:text-2xl">Tin tức nổi bật</p>
-                <p className="text-base text-[#1a1a1a]/80 md:text-lg">Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc.</p>
-              </div>
+              <p className="mt-3 px-2 pb-1 text-sm leading-6 text-[#1a1a1a]/80">
+                Mẫu AQURON 2000 (định mức 5 L/m²) trên bê tông M250 được OPACONTROL thử nghiệm theo TCVN 3116:2022 và TCVN 6415-18:2016: cấp chống thấm tăng gấp đôi so với mẫu đối chứng (W6 lên W12), độ cứng bề mặt tăng từ Mohs 3 lên Mohs 4 — minh chứng cơ chế thẩm thấu, làm đặc và chống thấm từ bên trong bê tông.
+              </p>
             </Reveal>
           </div>
         </div>

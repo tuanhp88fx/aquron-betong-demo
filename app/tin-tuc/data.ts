@@ -5,6 +5,7 @@ export type NewsItem = {
   summary: string;
   cover?: string;
   youtubeId?: string;
+  youtubeIds?: string[];
   gallery?: string[];
 };
 
@@ -16,6 +17,14 @@ export const newsItems: NewsItem[] = [
       "Tổng hợp phiếu kết quả thử nghiệm Vinacontrol cho các vật liệu chống thấm công nghệ Úc như Waterpel/AQURON. Kết quả thể hiện hiệu quả giảm hút nước rõ rệt, phù hợp định hướng chống thấm thẩm thấu sâu, khóa lỗ rỗng từ bên trong bê tông.",
     cover: "/news/vinacontrol-test/cover.jpg",
     gallery: ["/news/vinacontrol-test/01.jpg", "/news/vinacontrol-test/02.jpg", "/news/vinacontrol-test/03.jpg", "/news/vinacontrol-test/04.jpg", "/news/vinacontrol-test/05.jpg"],
+  },
+  {
+    slug: "vinh-phuc-nha-o-xa-hoi",
+    title: "Chống thấm tại dự án nhà ở xã hội Vĩnh Phúc",
+    date: "16/06/2026",
+    summary:
+      "Hai clip ghi nhận quá trình thi công chống thấm tại dự án nhà ở xã hội Vĩnh Phúc bằng công nghệ nano thẩm thấu AQURON 2000. Phun trực tiếp lên mặt bê tông, khóa lỗ rỗng từ bên trong, không cần dán màng.",
+    youtubeIds: ["jfljg0x4lfs", "9onQ5hqS5YE"],
   },
   {
     slug: "nhap-hang-30-05-2026",

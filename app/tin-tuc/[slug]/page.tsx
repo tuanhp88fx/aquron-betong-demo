@@ -64,7 +64,24 @@ export default function TinTucDetailPage({ params }: Props) {
           </p>
         </header>
 
-        {item.youtubeId ? (
+        {item.youtubeIds?.length ? (
+          <section className="mb-8 grid gap-4 sm:grid-cols-2">
+            {item.youtubeIds.map((vid) => (
+              <div key={vid} className="overflow-hidden rounded-3xl border border-[#1a1a1a]/10 bg-black shadow-sm">
+                <div className="aspect-[9/16] w-full">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${vid}`}
+                    title={item.title}
+                    className="h-full w-full"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ))}
+          </section>
+        ) : item.youtubeId ? (
           <section className="mb-8 overflow-hidden rounded-3xl border border-[#1a1a1a]/10 bg-black shadow-sm">
             <div className="aspect-[9/16] w-full sm:aspect-video">
               <iframe

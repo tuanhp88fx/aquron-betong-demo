@@ -1,25 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Instrument_Serif } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { PageTransition } from "@/components/page-transition"
 import "./globals.css"
 
 const GA_MEASUREMENT_ID = "G-R2M2R4TD0C"
-
-const inter = Inter({
-  subsets: ["latin", "vietnamese"],
-  variable: "--font-inter",
-  display: "swap",
-})
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-instrument-serif",
-  weight: ["400"],
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.chongthamnano.com"),
@@ -114,7 +100,7 @@ const productJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
+    <html lang="vi" className="antialiased">
       <head>
         <script
           type="application/ld+json"

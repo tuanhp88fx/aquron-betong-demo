@@ -60,7 +60,22 @@ export default function TinTucPage() {
                   href={`/tin-tuc/${item.slug}`}
                   className={`group block overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:border-[#c8102e]/30 hover:shadow-md ${index === 0 ? "border-[#c8102e]/30 ring-1 ring-[#c8102e]/10" : "border-[#1a1a1a]/10"}`}
                 >
-                  {item.youtubeId ? (
+                  {item.youtubeIds?.length ? (
+                    <div className="grid grid-cols-2 gap-1 bg-black">
+                      {item.youtubeIds.map((vid) => (
+                        <div key={vid} className="aspect-[9/16] w-full overflow-hidden bg-black">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${vid}`}
+                            title={item.title}
+                            className="h-full w-full pointer-events-none"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : item.youtubeId ? (
                     <div className="aspect-[9/16] w-full overflow-hidden bg-black sm:aspect-video">
                       <iframe
                         src={`https://www.youtube.com/embed/${item.youtubeId}`}
